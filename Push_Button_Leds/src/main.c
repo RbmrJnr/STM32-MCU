@@ -53,6 +53,6 @@ int main(void){
 
         if(((HWREG(GPIOA_BASE + GPIO_OFFSETIDR) & (1 << BUTTON3)) == 0)){
             HWREG(GPIOA_BASE + GPIO_OFFSETODR) |= (1 << LED3); 
-        }else HWREG(GPIOA_BASE + GPIO_OFFSETODR) &= ~H(1 << LED3);
+        }else HWREG(GPIOA_BASE + GPIO_OFFSETODR) &= ~(1 << LED3);
     }
 }
